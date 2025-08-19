@@ -1,0 +1,30 @@
+def chatbot_response(user_input):
+    user_input = user_input.lower()
+
+    if "hello" in user_input or "hi" in user_input:
+        return "Hello! How can I assist you today?"
+    elif "how are you" in user_input:
+        return "I'm just a program, but I'm functioning perfectly! How are you?"
+    elif "your name" in user_input:
+        return "I am a Rule-Based Chatbot, created for this internship task."
+    elif "bye" in user_input or "exit" in user_input:
+        return "Goodbye! Have a great day ahead."
+    elif "help" in user_input:
+        return "I can respond to greetings, tell you my name, and chat with you briefly."
+    else:
+        return "Sorry, I don't understand that yet."
+
+def main():
+    print("Rule-Based Chatbot — Internship Task")
+    print("Type 'bye' to exit the chat.\n")
+
+    while True:
+        user_text = input("You: ")
+        if user_text.lower() in ["bye", "exit"]:
+            print("Bot: Goodbye! Have a great day.")
+            break
+        response = chatbot_response(user_text)
+        print("Bot:", response)
+
+if __name__ == "__main__":
+    main()
