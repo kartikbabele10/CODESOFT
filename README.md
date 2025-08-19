@@ -1,30 +1,34 @@
-def chatbot_response(user_input):
-    user_input = user_input.lower()
+🔹 How Your The Works:
 
-    if "hello" in user_input or "hi" in user_input:
-        return "Hello! How can I assist you today?"
-    elif "how are you" in user_input:
-        return "I'm just a program, but I'm functioning perfectly! How are you?"
-    elif "your name" in user_input:
-        return "I am a Rule-Based Chatbot, created for this internship task."
-    elif "bye" in user_input or "exit" in user_input:
-        return "Goodbye! Have a great day ahead."
-    elif "help" in user_input:
-        return "I can respond to greetings, tell you my name, and chat with you briefly."
-    else:
-        return "Sorry, I don't understand that yet."
+chatbot_response() function
+Converts user input to lowercase (user_input.lower()).
+Uses if-elif-else conditions to check for keywords.
+Returns pre-defined responses based on matching patterns.
+main() function
+Prints an introduction message.
+Runs an infinite loop until the user types "bye" or "exit".
+Takes input from the user, passes it to chatbot_response(), and prints the reply.
+Program Execution
+Runs main() if the script is executed directly (if __name__ == "__main__":).
 
-def main():
-    print("Rule-Based Chatbot — Internship Task")
-    print("Type 'bye' to exit the chat.\n")
 
-    while True:
-        user_text = input("You: ")
-        if user_text.lower() in ["bye", "exit"]:
-            print("Bot: Goodbye! Have a great day.")
-            break
-        response = chatbot_response(user_text)
-        print("Bot:", response)
+🔹 Skills Used in the Above Chatbot Code:
 
-if __name__ == "__main__":
-    main()
+Python Programming Basics
+Use of functions (chatbot_response, main)
+Use of conditionals (if-elif-else)
+Loops (while True) to keep conversation going
+String operations (lower(), keyword search using "in")
+Rule-Based Logic Building
+Designing a decision-making system where responses depend on keywords.
+Basic intent recognition (greetings, exit, help, etc.).
+User Interaction / I/O Handling
+Taking input using input()
+Printing chatbot responses using print()
+Clear conversation flow (input → processing → response).
+Program Structure & Flow Control
+Using if __name__ == "__main__": for script execution.
+Breaking loops gracefully when user types "bye" or "exit".
+Text Preprocessing
+Normalizing text with .lower() so that input is case-insensitive.
+(Simple form of NLP preprocessing).
